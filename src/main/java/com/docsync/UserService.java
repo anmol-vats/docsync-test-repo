@@ -1,14 +1,11 @@
 public class UserService{
-  System.out.println("Tetsing");
-System.out.println("Tetsing2");
-System.out.println("Tetsing3");
-System.out.println("Tetsing4");
-System.out.println("Tetsing5");
-System.out.println("Tetsing6");
-System.out.println("Tetsing7");
-System.out.println("Tetsing8");
-System.out.println("Tetsing9");
-public User createUser(String user) {
-  System.out.println("User name is " + user);
+  public User createUser(String user) {
+    System.out.println("Creating user: " + user);
+
+    if (user == null || user.isBlank()) {
+        throw new IllegalArgumentException("User name cannot be empty");
+    }
+
+    System.out.println("User name is " + user);
 }
 }
