@@ -6,12 +6,8 @@ public class UserService{
     if (user == null || user.isBlank()) {
         throw new IllegalArgumentException("User name cannot be empty");
     }
-    if (user == null || user.isBlank()) {
-    throw new IllegalArgumentException("User name cannot be empty");
-}
- if (user == null || user.isBlank()) {
+    if(user != null){
         throw new IllegalArgumentException("User name cannot be empty");
     }
-    System.out.println("Testing123 " + user);
 }
 }
