@@ -9,5 +9,8 @@ public class UserService{
     if(user != null){
         throw new IllegalArgumentException("User name cannot be empty");
     }
+    if(user == null || user.isEmpty()){
+        throw new IllegalArgumentException("User name cannot be empty");
+    }
 }
 }
