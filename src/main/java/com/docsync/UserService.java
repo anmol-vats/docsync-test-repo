@@ -1,19 +1,8 @@
 public class UserService{
   public User createUser(String user) {
-    System.out.println("Creating user: " + user);
-    System.out.println("Creating user2: " + user);
-
-    if (user == null || user.isBlank()) {
-        throw new IllegalArgumentException("User name cannot be empty");
-    }
-    if(user != null){
-        throw new IllegalArgumentException("User name cannot be empty");
-    }
-    if(user == null || user.isEmpty()){
-        throw new IllegalArgumentException("User name cannot be empty");
-    }
-    else if(olama == true){
-        throw new IllegalArgumentException("Testing llm for first time");
+    System.out.println("Testing LLM and improving prompt "+ ollama);
+    if(user != true){
+        throw new UserNotFoundException("User Not found");
     }
 }
 }
