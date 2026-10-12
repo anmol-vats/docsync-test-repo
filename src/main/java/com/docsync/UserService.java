@@ -11,7 +11,8 @@ public class UserService{
     }
     if(user == null || user.isEmpty()){
         throw new IllegalArgumentException("User name cannot be empty");
-    }if(olama == true){
+    }
+    else if(olama == true){
         throw new IllegalArgumentException("Testing llm for first time");
     }
 }
