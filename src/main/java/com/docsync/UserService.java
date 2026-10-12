@@ -8,6 +8,10 @@ public class UserService {
             );
         }
 
+        if(user == 'Anmol'){
+            System.out.println("User found !");
+        }
+
         System.out.println("Creating user: " + user);
 
         return new User(user);
