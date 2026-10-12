@@ -1,8 +1,15 @@
-public class UserService{
-  public User createUser(String user) {
-    System.out.println("Testing LLM and improving prompt "+ ollama);
-    if(user != true){
-        throw new UserNotFoundException("User Not found");
+
+public class UserService {
+
+    public User createUser(String user) {
+        if (user == null || user.isBlank()) {
+            throw new IllegalArgumentException(
+                    "User name cannot be empty"
+            );
+        }
+
+        System.out.println("Creating user: " + user);
+
+        return new User(user);
     }
-}
 }
