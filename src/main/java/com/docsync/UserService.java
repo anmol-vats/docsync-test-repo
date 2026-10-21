@@ -20,4 +20,11 @@ public class UserService {
 
         return new User(user);
     }
+    private void testingMethod(){
+        System.out.println("Tetsing this method");
+        int n = 0;
+        if(n == 0){
+            System.out.println("perfect");
+        }
+    }
 }
