@@ -12,6 +12,10 @@ public class UserService {
             System.out.println("User found !");
         }
 
+        if(user != 'Anmol'){
+            System.out.println("User not found..");
+        }
+
         System.out.println("Creating user: " + user);
 
         return new User(user);
