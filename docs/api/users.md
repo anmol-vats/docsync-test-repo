@@ -1,4 +1,3 @@
-
 # Users API
 
 ## Overview
