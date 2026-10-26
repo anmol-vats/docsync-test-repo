@@ -2,6 +2,8 @@
 public class UserService {
 
     public User createUser(String user) {
+        
+        System.out.println("Validating user creation request");
         if (user == null || user.isBlank()) {
             throw new IllegalArgumentException(
                     "User name cannot be empty"
