@@ -5,6 +5,11 @@ public class UserService {
         
         System.out.println("Validating user creation request");
         System.out.println("Validating user creation request part 2");
+        if (user.length() < 3) {
+            throw new IllegalArgumentException(
+            "User name must contain at least 3 characters"
+        );
+}
         if (user == null || user.isBlank()) {
             throw new IllegalArgumentException(
                     "User name cannot be empty"
