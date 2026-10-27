@@ -2,25 +2,30 @@
 public class UserService {
 
     public User createUser(String user) {
-        
+
         System.out.println("Validating user creation request");
         System.out.println("Validating user creation request part 2");
-        if (user.length() < 5) {
-            throw new IllegalArgumentException(
-            "User name must contain at least 5 characters"
-        );
-}
+
+        // Validate null or blank input first
         if (user == null || user.isBlank()) {
             throw new IllegalArgumentException(
                     "User name cannot be empty"
             );
         }
 
-        if(user == 'Anmol'){
-            System.out.println("User found !");
+        // Validate minimum username length
+        if (user.length() < 5) {
+            throw new IllegalArgumentException(
+                    "User name must contain at least 5 characters"
+            );
         }
 
-        if(user != 'Anmol'){
+        // Compare Strings using .equals()
+        if (user.equals("Anmol")) {
+            System.out.println("User found!");
+        }
+
+        if (!user.equals("Anmol")) {
             System.out.println("User not found..");
         }
 
@@ -28,10 +33,12 @@ public class UserService {
 
         return new User(user);
     }
-    private void testingMethod(){
-        System.out.println("Tetsing this method");
+
+    private void testingMethod() {
+        System.out.println("Testing this method");
+
         int n = 0;
-        if(n == 0){
+        if (n == 0) {
             System.out.println("perfect");
         }
     }
